@@ -11,12 +11,15 @@ question= countries[n]+' has capital of?'
 print(question)
 print(CorrectDir[countries[n]])
 keys={}
-keys[1]=CorrectDir[countries[n]]
+nint2=random.randint(1,4)
+keys[nint2]=CorrectDir[countries[n]]
 print(keys)
 k=1
 while k<4:
-	k=k+1
 	nint=random.randint(0,9)
-	keys[k]=CorrectDir[countries[nint]]
+	nint3=random.randint(1,4)
+	if nin3!=nint2:
+		keys[nint3]=CorrectDir[countries[nint]]
+		k=k+1
 print(keys)
 	
