@@ -18,7 +18,7 @@ k=1
 while k<4:
 	nint=random.randint(0,9)
 	nint3=random.randint(1,4)
-	if nin3!=nint2:
+	if nint3!=nint2:
 		keys[nint3]=CorrectDir[countries[nint]]
 		k=k+1
 print(keys)
