@@ -1,25 +1,28 @@
 # the first
 import random
-print ('Hello world')
 capitals=['Aphina','Roma','Moscow','Bejing','Tokio','Tel-Aviv','Washington','Rabbat','Monako','Paris']
-print(capitals)
 countries=['Greece','Italy','Russia','China','Japan','Israel','USA','Morokko','Monako','France']
 CorrectDir={'Greece':'Aphina','Italy':'Roma','Russia':'Moscow','China':'Bejing','Japan':'Tokio','Israel':'Tel-Aviv','USA':'Washington','Morokko':'Rabbat','Monako':'Monako','France':'Paris'}
-print(countries)
 n=random.randint(0,9)
 question= countries[n]+' has capital of?'
 print(question)
-print(CorrectDir[countries[n]])
-keys={}
+answer='the capital of ' +countries[n]+' is '+CorrectDir[countries[n]]
+print(answer)
 nint2=random.randint(1,4)
-keys[nint2]=CorrectDir[countries[n]]
-print(keys)
-k=1
+key={}
+key[nint2]=CorrectDir[countries[n]]
+k=0
 while k<4:
-	nint=random.randint(0,9)
-	nint3=random.randint(1,4)
-	if nint3!=nint2:
-		keys[nint3]=CorrectDir[countries[nint]]
-		k=k+1
-print(keys)
-	
+	k+=1
+	if k!=nint2:
+		while True:
+			nint=random.randint(0,9)	
+			if CorrectDir[countries[nint]] not in key.values():
+				key[k]=CorrectDir[countries[nint]]
+				break
+					
+print(key)
+k=1
+while k<=4:
+	print(k,'-',key[k])
+	k+=1
