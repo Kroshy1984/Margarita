@@ -7,7 +7,7 @@ n=random.randint(0,9)
 question= countries[n]+' has capital of?'
 print(question)
 answer='the capital of ' +countries[n]+' is '+CorrectDir[countries[n]]
-print(answer)
+#print(answer)
 nint2=random.randint(1,4)
 key={}
 key[nint2]=CorrectDir[countries[n]]
@@ -19,10 +19,14 @@ while k<4:
 			nint=random.randint(0,9)	
 			if CorrectDir[countries[nint]] not in key.values():
 				key[k]=CorrectDir[countries[nint]]
-				break
-					
-print(key)
+				break		
+#print(key)
 k=1
 while k<=4:
 	print(k,'-',key[k])
 	k+=1
+answ=input('Select your answer please ')
+a=key[int(answ)]
+print('Your answer is - ', a)
+if a==CorrectDir[countries[n]]: print('You are right')
+else:print('your are wrong!')
