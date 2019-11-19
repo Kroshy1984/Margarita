@@ -8,7 +8,7 @@ print('Now you have to ask on our ten question')
 q=0
 w=0
 r=0
-while q<=10:
+while q<10:
 	q+=1
 	n=random.randint(0,9)
 	question= countries[n]+' has capital of?'
@@ -41,5 +41,6 @@ while q<=10:
 		w+=1
 print('Now our test is end!')
 if r>7: print('You are very good specialized! You were right at', r ,'times!')
-elif r>5 and r<7:print('You are not bed specialized! You were right at ', r ,'times! but in ', w,' times you were wrong!')
-elif  r<5:print('you are bed specialized! You were right at', r ,'times! but in ', w,' times you were wrong!')
+elif r>=5 and r<=7:print('You are not bed specialized! You were right at ', r ,'times! but in ', w,' times you were wrong!')
+elif  r<5 and r!=0:print('you are bed specialized! You were right at', r ,'times! but in ', w,' times you were wrong!')
+elif r==0:print('you are very bed specialized! You were always wrong!')

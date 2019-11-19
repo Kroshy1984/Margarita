@@ -1,0 +1,3 @@
+{
+    "files": ["mainproject.py","dialog.h","dialog.cpp","dialog.ui"]
+}
