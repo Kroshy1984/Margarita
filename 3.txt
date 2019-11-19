@@ -1,0 +1,29 @@
+# the first
+import random
+capitals=['Aphina','Roma','Moscow','Bejing','Tokio','Tel-Aviv','Washington','Rabbat','Monako','Paris']
+countries=['Greece','Italy','Russia','China','Japan','Israel','USA','Morokko','Monako','France']
+CorrectDir={'Greece':'Aphina','Italy':'Roma','Russia':'Moscow','China':'Bejing','Japan':'Tokio','Israel':'Tel-Aviv','USA':'Washington','Morokko':'Rabbat','Monako':'Monako','France':'Paris'}
+print('Hi! This is the geographical knolege test.Level 3')
+print('Now you have to ask on our ten question')
+q=0 # question number
+w=0 #wrong answers counter
+r=0 #right answer counter
+while q<10: #loop for 10 questions
+	q+=1 #question counter level up
+	n=random.randint(0,9)
+	question= countries[n]+' has capital of?'
+	print('The question ',q,'-',question) #print question
+	answer='the capital of ' +countries[n]+' is '+CorrectDir[countries[n]] # right answer 
+	answ=input('Tape your answer please ') # ask answer
+	print('Your answer is - ', answ)
+	if answ==CorrectDir[countries[n]]: 
+		print('You are right')
+		r+=1 #right counter's level up
+	else:
+		print('you are wrong!')
+		w+=1 #wrong answers level up
+print('Now our test is end!')
+if r>7: print('You are very good specialized! You were right at', r ,'times!')
+elif r>=5 and r<=7:print('You are not bed specialized! You were right at ', r ,'times! but in ', w,' times you were wrong!')
+elif  r<5 and r!=0:print('you are bed specialized! You were right at', r ,'times! but in ', w,' times you were wrong!')
+elif r==0:print('you are very bed specialized! You were always wrong!')
