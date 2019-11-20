@@ -44,3 +44,4 @@ def Level1():
 	elif r>=5 and r<=7:print('You are not bed specialized! You were right at ', r ,'times! but in ', w,' times you were wrong!')
 	elif  r<5 and r!=0:print('you are bed specialized! You were right at', r ,'times! but in ', w,' times you were wrong!')
 	elif r==0:print('you are very bed specialized! You were always wrong!')
+    return None
