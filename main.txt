@@ -3,7 +3,7 @@ from dic import  *
 import random,level1,level3,Finalization
 print('Я игра-тест по географии')
 while True:
-	b = input('Введите желаемый уровень для начала игры(1-3 на клавиатуре)')
+	b = input('Хотите продолжить - Д\Н. Введите желаемый уровень для начала игры(1-3 на клавиатуре)')
 	if b =='1': 
 		r=level1.Level(countries,CorrectDir, capitals)
 		break
